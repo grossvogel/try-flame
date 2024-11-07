@@ -19,7 +19,7 @@ ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}-debian-$
 ARG RUNNER_IMAGE="debian:${DEBIAN_VERSION}"
 
 # NOTE: hard-coding the FROM here to see if Dependabot understands better
-FROM hexpm/elixir:1.15.7-erlang-26.1.2-debian-bullseye-20231009-slim as builder
+FROM hexpm/elixir:1.17.3-erlang-27.1-debian-bullseye-20240926-slim as builder
 
 # install build dependencies
 RUN apt-get update -y && apt-get install -y build-essential git curl \
