@@ -67,7 +67,7 @@ RUN mix release
 # start a new build stage so that the final image will only contain
 # the compiled release and other runtime necessities
 # NOTE: hard-coding the FROM here to see if Dependabot understands better
-FROM debian-bullseye-20231009-slim
+FROM debian:bullseye-20231009-slim
 
 RUN apt-get update -y && \
   apt-get install -y libstdc++6 openssl libncurses5 locales ca-certificates \
